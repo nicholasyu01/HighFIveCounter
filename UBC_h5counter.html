@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+
+    <title>High Five</title>
+    <style>
+        #title{
+            font-family: 'Alata', sans-serif;
+            text-align: center;
+            font-size: 200%;
+        }
+        #container {
+            width: 100%;
+            display: inline-flex;
+            text-align: center;
+            padding-top: 10%;
+        }
+
+        #clicker {
+            /* background-color: red; */
+            width: 50%;
+            height: 100%;
+        }
+
+        #counter {
+            /* background-color: blue; */
+            width: 50%;
+            font-family: 'Alata', sans-serif;
+
+        }
+
+        #number {
+            font-size: 750%;
+        }
+
+        @media screen and (max-width: 800px) {
+            #container {
+                display: block;
+                
+            }
+            #clicker {
+                width: 100%
+            }
+            
+            #counter {
+                width:100%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">COUNT YOUR HIGH FIVES</h1>
+    <div id="container">
+        <div id="clicker">
+            <img src="hand.png" id="hand" />
+        </div>
+        <div id="counter">
+            <span id="number">0</span>
+        </div>
+    </div>
+
+    <script>
+        var count = 1;
+        $("#clicker").click(function (event) {
+            document.getElementById("number").innerHTML = count;
+            count++;
+        })
+    </script>
+</body>
+
+</html>
